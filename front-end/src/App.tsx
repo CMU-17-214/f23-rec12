@@ -43,7 +43,7 @@ class App extends React.Component<Props, GameState> {
    * just an issue of Javascript.
    */
   newGame = async () => {
-    const response = await fetch('/newgame');
+    const response = await fetch('/api/newgame');
     const json = await response.json();
     this.setState({ cells: json['cells'] });
   }
@@ -59,7 +59,7 @@ class App extends React.Component<Props, GameState> {
     return async (e) => {
       // prevent the default behavior on clicking a link; otherwise, it will jump to a new page.
       e.preventDefault();
-      const response = await fetch(`/play?x=${x}&y=${y}`)
+      const response = await fetch(`/api/play?x=${x}&y=${y}`)
       const json = await response.json();
       this.setState({ cells: json['cells'] });
     }
