@@ -26,3 +26,5 @@ npm run build
 cd ..
 docker build -t lab12 --platform linux/amd64 .
 ```
+
+You can run the container with `docker run -p 8080:8080 lab12` and should be able to see the server starting on the command line and be able to access it at `http://localhost:8080`.
