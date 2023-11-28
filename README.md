@@ -24,5 +24,5 @@ cd ../front-end
 npm install
 npm run build
 cd ..
-docker build -t lab12 .
+docker build -t lab12 --platform linux/amd64 .
 ```
